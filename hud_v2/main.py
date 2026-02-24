@@ -5,7 +5,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtGui import (
     QPixmap, QFontDatabase, QFont, QPainter, QLinearGradient, 
-    QColor, QBrush, QPen, QTransform, QPainterPath, QFontMetrics
+    QColor, QBrush, QPen, QTransform, QPainterPath, QFontMetrics, QIcon
 )
 from PyQt6.QtCore import (
     Qt, QTimer, QPropertyAnimation, QRect, QEasingCurve, 
@@ -1121,7 +1121,7 @@ if __name__ == '__main__':
     # Иконка приложения (для панели задач и заголовка окна)
     icon_path = asset_path("icon.ico")
     if os.path.exists(icon_path):
-        app.setWindowIcon(QPixmap(icon_path))
+        app.setWindowIcon(QIcon(icon_path))
     
     hud = MainHUD()
     hud.setWindowTitle("EWL Season 2 HUD v2.0")
